@@ -1,10 +1,28 @@
 public class Employee {
 
+    private static int val = 20;
+
     private String employeeName;
     private String designation;
     private int salary;
-    private String address;
+    private Address address;
     private int age;
+
+    public static void justForPracticeStatic(){
+        System.out.println(val);
+    }
+
+    public Employee(String employeeName, Address address){
+        System.out.println("Constructor with two String parameters...");
+        this.employeeName = employeeName;
+        this.address = address;
+    }
+
+    public Employee(int age, int salary, String name, Address address){
+        this(name, address);
+        this.age = age;
+        this.salary = salary;
+    }
 
     public void setEmployeeName(String employeeName){
         this.employeeName = employeeName;
@@ -42,11 +60,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -56,24 +74,6 @@ public class Employee {
         System.out.println("Salary -"+salary);
         System.out.println("Address - "+address);
         System.out.println("Age - "+age);
-    }
-
-    public void printEmployeeNameNoOfTimes(int numberOfTimes){
-      /*  int n = 1;
-
-        while(n <= numberOfTimes){
-            System.out.println(employeeName);
-            n++;
-        }*/
-
-       /* for(int n = 1; n <= numberOfTimes; n++){
-            System.out.println(employeeName);
-        } */
-        int n = 1;
-        do{
-            System.out.println(employeeName);
-            n++;
-        }while(n <= numberOfTimes);
     }
 
 }
