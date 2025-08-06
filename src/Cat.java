@@ -8,11 +8,21 @@ public class Cat extends Animal{
         super(name);
     }
 
+    @Override
+    public void eat() {
+
+    }
+
     public void jump(){
         System.out.println(getName()+ " is jumping..!");
     }
 
     public void makeNoise(){
         System.out.println(getName()+" says - Meaun Meaun..!");
+    }
+
+    @Override
+    public void roam() {
+
     }
 }
